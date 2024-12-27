@@ -179,7 +179,6 @@ MonoBehaviour:
   enemyGunEnd: {fileID: 1347387423482764733}
   enemyExplosinEffectPrefab: {fileID: 8567501815863544641, guid: 2a00eeabd0ae35c4699dd0d0e4d98142, type: 3}
   playerExplosinEffectPrefab: {fileID: 5955781542971847813, guid: c9928cea47bf89a41ac37982878978eb, type: 3}
-  audioManager: {fileID: 0}
 --- !u!1 &6149289466524871846
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 6149289466524871846}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.007, y: -0.683, z: 0}
+  m_LocalPosition: {x: -0.007, y: -0.418, z: 0}
   m_LocalScale: {x: 1.00856, y: 1.03086, z: 1.0442}
   m_ConstrainProportionsScale: 0
   m_Children: []

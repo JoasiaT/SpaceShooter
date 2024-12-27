@@ -8,11 +8,6 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("Level 1");
     }
 
-    public void Options()
-    {
-        
-    }
-
     public void ExitGame()
     {
         Application.Quit();

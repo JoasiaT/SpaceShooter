@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        GameManager.uiManager = this;
     }
 
     public void Start()

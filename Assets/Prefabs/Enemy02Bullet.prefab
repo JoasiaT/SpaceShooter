@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706fd1b8cce64fd4b8c017d4d67d287c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 7
   playerTransform: {fileID: 0}
   playerExplosinEffectPrefab: {fileID: 8922238561593191660, guid: 214ae8a274f4d28458c536f5a39a087a, type: 3}
   bulletExplosinEffectPrefab: {fileID: 8922238561593191660, guid: 214ae8a274f4d28458c536f5a39a087a, type: 3}

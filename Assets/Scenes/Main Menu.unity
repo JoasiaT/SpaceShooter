@@ -2234,8 +2234,8 @@ MonoBehaviour:
   playerExplosion: {fileID: 8300000, guid: 9cc993ede2882c54299fdae965fdc11a, type: 3}
   endGameSound: {fileID: 8300000, guid: 06d47b35f7c576241839e4ca386756da, type: 3}
   winGameSound: {fileID: 8300000, guid: 9e7210fee801c9d45992cb9d13977902, type: 3}
-  firstAidSmallSound: {fileID: 0}
-  firstAidLargeSound: {fileID: 0}
+  firstAidSmallSound: {fileID: 8300000, guid: 09bbee88e53785945a2c3ffdf2ec761a, type: 3}
+  firstAidLargeSound: {fileID: 8300000, guid: 09bbee88e53785945a2c3ffdf2ec761a, type: 3}
 --- !u!1 &1542451724
 GameObject:
   m_ObjectHideFlags: 0
