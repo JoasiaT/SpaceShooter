@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 2f;
     public Transform minXValue;
     public Transform maxXValue;
+    public float powerupTime = 10f;
 
     public GameObject bulletPrefab;
     public Transform gunEndPosition;
@@ -16,6 +17,10 @@ public class PlayerController : MonoBehaviour
     public EndGameScreen endGameScreen;
 
     private AudioManager audioManager;
+    private float oldMoveSpeed;
+    private float oldFireRate;
+    private float tslPowerupModeAction = 0f;
+    private bool powerupMode = false;
 
     private void Awake()
     {
@@ -25,9 +30,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         GameManager.playerController = this;
+        oldMoveSpeed = moveSpeed;
+        oldFireRate = fireRate;
     }
 
-    void Update()
+void Update()
     {
         PlayerMovement();
         if (Input.GetKey(KeyCode.Space))
@@ -38,6 +45,16 @@ public class PlayerController : MonoBehaviour
         {
             endGameScreen.SetEndInfo(GameManager.uiManager.score);
             audioManager.PlaySFX(audioManager.endGameSound);
+        }
+        if (powerupMode)
+        {
+            tslPowerupModeAction += Time.deltaTime;
+            if (tslPowerupModeAction >= powerupTime)
+            {
+                moveSpeed = oldMoveSpeed;
+                fireRate = oldFireRate;
+                powerupMode = false;
+            }
         }
     }
     void PlayerMovement()
@@ -108,6 +125,13 @@ public class PlayerController : MonoBehaviour
     public void HittedByFirstAidLarge()
     {
         GameManager.uiManager.HittedByAidKitLarge();
+    }
+
+    public void HittedByPowerupBook()
+    {
+        moveSpeed *= 2f;
+        fireRate /= 2f;
+        powerupMode = true;
     }
 
 }

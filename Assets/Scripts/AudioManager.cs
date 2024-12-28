@@ -97,5 +97,5 @@ public class AudioManager : MonoBehaviour
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
         SetMusicVolume();
     }
-
+    
 }

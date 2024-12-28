@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
     public List<GameObject> hpPointsList;
     public TMP_Text scoreText;
     public int score = 0;
-    private int maxScore = 20;
+    private int maxScore = 50;
     public int powerLevel; // ilosc "energii"
 
     public WinGameScreen winGameScreen;
