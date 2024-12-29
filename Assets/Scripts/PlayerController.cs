@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     private float oldFireRate;
     private float tslPowerupModeAction = 0f;
     private bool powerupMode = false;
+    public bool shieldEnabed = false;
+
+    public GameObject shield;
 
     private void Awake()
     {
@@ -89,6 +92,7 @@ void Update()
         }
         transform.position = pos;
     }
+
     void Shoot()
     {
         timeSinceLastAction += Time.deltaTime;
@@ -115,6 +119,7 @@ void Update()
         {
             GameManager.uiManager.HittedByEnemyBullet();
         }
+        DisableShield();
         audioManager.PlaySFX(audioManager.playerExplosion);
     }
 
@@ -132,6 +137,21 @@ void Update()
         moveSpeed *= 2f;
         fireRate /= 2f;
         powerupMode = true;
+        tslPowerupModeAction = 0f;
     }
 
+    public void HittedByGearUpBig()
+    {
+        shield.SetActive(true);
+        shieldEnabed = true;
+    }
+
+    public void DisableShield()
+    {
+        if (shieldEnabed)
+        {
+            shield.SetActive(false);
+            shieldEnabed = false;
+        }
+    }
 }

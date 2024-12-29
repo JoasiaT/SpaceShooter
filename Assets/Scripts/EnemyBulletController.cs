@@ -22,11 +22,14 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (!GameManager.playerController.shieldEnabed)
         {
-            GameManager.playerController.HittedByBullet();
-            Instantiate(playerExplosinEffectPrefab, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            if (collision.gameObject.tag == "Player")
+            {
+                GameManager.playerController.HittedByBullet();
+                Instantiate(playerExplosinEffectPrefab, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         }
 
         if (collision.gameObject.tag == "Bullet")

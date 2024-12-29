@@ -51,7 +51,7 @@ public class EnemyController : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            GameManager.playerController.HittedByBullet();
+            GameManager.playerController.HittedByBullet();            
             Instantiate(playerExplosinEffectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

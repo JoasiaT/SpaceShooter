@@ -9,6 +9,7 @@ TagManager:
   - EnemyBullet
   - FxTemporaire
   - Audio
+  - Shield
   layers:
   - Default
   - TransparentFX

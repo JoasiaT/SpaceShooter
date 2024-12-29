@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2246035442645168642}
-  - component: {fileID: 8282658880982763558}
+  - component: {fileID: -7281053556367587699}
   m_Layer: 0
-  m_Name: PowerUpSpawner
+  m_Name: GearBigUpSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8282658880982763558
+--- !u!114 &-7281053556367587699
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,10 +41,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7969915949903899984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40483c0aa9d51324cab48f67f9a884e3, type: 3}
+  m_Script: {fileID: 11500000, guid: c3d293b0fe3822f439a3972ba04fad0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupPrefab: {fileID: 3761011905455423822, guid: ef3404167080dc64d915893c84a22826, type: 3}
+  gearBigUpPrefab: {fileID: 452994014159653022, guid: 3c723e55033db24419457ffc79fd45ed, type: 3}
   spawnRate: 20
   minXAxisSpawnValue: -5
   maxXAxisSpawnValue: 5
